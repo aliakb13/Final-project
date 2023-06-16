@@ -1,0 +1,106 @@
+/* ============= STYLING DASHBOARD ============= */
+.dash-icon .bi {
+    background: #F3F7FD;
+    color: #2F82FF;
+}
+
+/* ============= STYLING TABLE ============= */
+.btn-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2F82FF;
+    color: white;
+    text-decoration: none;
+    padding: 7px 20px;
+    border-radius: 8px;
+}
+
+/* ============= STYLING CREATE LAYOUT ============= */
+.form-user-create input {
+    height: 40px;
+}
+
+/* ============= STYLING CARD TICKET ============= */
+.card-container {
+    overflow: hidden;
+}
+
+.flap {
+    width: 100%;
+    height: 100%;
+}
+
+.flap::before {
+    position: absolute;
+    content: attr(datacode);
+    display: flex;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    color: #2F82FF;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    background: white;
+    background-position: 100px;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.flap::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: attr(dataindex);
+    height: 100%;
+    width: 50%;
+    right: 0;
+    font-size: large;
+    font-weight: bold;
+    color: #2F82FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    background-position: -200px;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.card-container:hover .flap::after {
+    transform: translatex(300px);
+}
+
+.card-container:hover .flap::before {
+    transform: translatex(-300px);
+}
+
+.card-container .card-footer {
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #FF4E4E, #2F82FF, #F3F7FD);
+}
+
+/* ============= STYLING TABNAV ON TICKET ============= */
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #2F82FF;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #2F82FF;
+}
+
+.nav-tabs .nav-link {
+    font-size: 20px;
+    border: none;
+    color: #FF4E4E;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+    border: none;
+    background-color: #2F82FF;
+    color: white;
+    /* border-bottom: 2px solid #FF4E4E; */
+}

@@ -1,0 +1,89 @@
+/* ============= STYLING BG ON DASHBOARD ============= */
+.bg-dark-pink {
+    background: linear-gradient(to right, #493240, #f09) !important;
+    color: white;
+    overflow: hidden;
+    border: 2px solid #f09;
+    transition: 0.5s ease-out;
+}
+
+.bg-dark-green {
+    background: linear-gradient(to right, #0a504a, #38ef7d) !important;
+    color: white;
+    overflow: hidden;
+    border: 2px solid #38ef7d;
+    transition: 0.5s ease-out;
+}
+
+.bg-dark-orange {
+    background: linear-gradient(to right, #a86008, #ffba56) !important;
+    color: #fff;
+    overflow: hidden;
+    border: 2px solid #ffba56;
+    transition: 0.5s ease-out;
+}
+
+.card .card-icon {
+    text-align: center;
+    line-height: 50px;
+    margin-left: 15px;
+    color: #000;
+    position: absolute;
+    right: -5px;
+    top: 20px;
+    opacity: 0.1;
+}
+
+.card-icon .bi,
+.text-number {
+    font-size: 110px;
+}
+
+.card-button {
+    transform: translate(-50%, 0%);
+    width: 40%;
+    border-radius: 0 20px 0 20px;
+    border: none;
+    text-align: center;
+    background-color: white;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.card.bg-dark-pink:hover, .card.bg-dark-green:hover, .card.bg-dark-orange:hover {
+    border-color: white;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card.bg-dark-pink:hover .card-button, .card.bg-dark-green:hover .card-button, .card.bg-dark-orange:hover .card-button {
+    transform: translate(0%, 0%);
+    opacity: 1;
+}
+
+/* ============= STYLING MOVE OBJECT AIRPLANE ============= */
+@keyframes dot-lined {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 95%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+.animate--airplane {
+    animation: airplane-moving 10s linear infinite;
+}
+
+.animate--line {
+    animation: dot-lined 10s linear infinite;
+}

@@ -1,0 +1,484 @@
+/* ============= styling dashboard user ============= */
+
+.bg--airplane {
+    height: 50vh;
+    background-image: url(../../../assets/bg_airplane_sky.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 2em;
+}
+
+.bg--home {
+    height: 50vh;
+    background: linear-gradient(90deg, white, transparent), url(../../../assets/Home.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, bottom -50px right;
+    background-size: cover, cover;
+    margin-bottom: 2em;
+}
+
+.bg--why {
+    height: 50vh;
+    background-image: url(../../../assets/bg_why.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 3em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bg--why a {
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: .5em 2em;
+    border-radius: 10px;
+}
+
+.intro--user {
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.5;
+    display: inline;
+    background-image: linear-gradient(transparent 50%,
+            #e1fffe 50%,
+            #b0f8ff 85%,
+            transparent 85%,
+            transparent 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+}
+
+@keyframes animatedBackground {
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+.dashboard--card {
+    width: 100%;
+    margin-bottom: 1.3em;
+    border: 1px solid #2F82FF;
+    transition: all .5s ease-out;
+}
+
+.dashboard--card:hover {
+    box-shadow: 1px 5px 20px -5px #2F82FF;
+}
+
+.dashboard--detail {
+    color: white;
+    background: #2F82FF;
+    padding: .8em;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.plan-card {
+    background: #fff;
+    width: calc(100% - 0.68rem);
+    padding: 2rem 0 2rem 2rem;
+    border-radius: 10px;
+    transition: all .5s linear;
+    font-family: "Poppins", sans-serif;
+}
+
+.plan-card:hover {
+    box-shadow: 0 6px 30px rgba(207, 212, 222, 0.3);
+}
+
+.plan-card h2 {
+    margin-bottom: 15px;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.plan-card h2 span {
+    display: block;
+    margin-top: -4px;
+    color: #4d4d4d;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.etiquet-price {
+    position: relative;
+    background: #FF4E4E;
+    margin-right: -0.68rem;
+    padding: .2rem 1.2rem;
+    border-radius: 5px 0 0 5px;
+}
+
+.etiquet-price p {
+    margin: 0;
+    padding-top: .4rem;
+    display: flex;
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: white;
+}
+
+.etiquet-price p:before {
+    content: "Rp";
+    margin-right: 5px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+}
+
+.etiquet-price div {
+    position: absolute;
+    bottom: -23px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid #972c2c;
+    border-bottom: 10px solid transparent;
+    border-right: 13px solid transparent;
+    z-index: -6;
+}
+
+.dashboard--int {
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 3em;
+    transition: all .5s ease-out;
+}
+
+.dashboard--int:hover {
+    box-shadow: 1px 5px 20px -5px #2F82FF;
+}
+
+.dashboard--int:hover .dashboard--card--footer::before {
+    height: 100%;
+    cursor: pointer;
+}
+
+.dashboard--int:hover .dashboard--card--footer a {
+    color: black;
+}
+
+.dashboard--card--footer {
+    position: relative;
+    transition: all .5s ease-in;
+}
+
+.dashboard--card--footer::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    background: white;
+    position: absolute;
+    color: black;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s ease-in-out;
+    border-radius: 0 0 5px 5px;
+}
+
+.dashboard--card--footer a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+.dashboard--card--why {
+    height: 120px;
+    transition: all .5s;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+.dashboard--card--why:hover {
+    height: 224px;
+    background: white;
+    box-shadow: 1px 5px 10px -5px black;
+}
+
+.dashboard--card--why .header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #212121;
+    margin-bottom: 16px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+}
+
+.dashboard--card--why .header .img-box > * {
+    width: 50px;
+    color: white;
+    font-size: 50px;
+}
+
+.dashboard--card--why .header .dashboard--card--why--title {
+    font-size: 1.1em;
+    letter-spacing: .1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 4px 0 14px 0;
+    transition: all .5s;
+    color: white;
+}
+
+.dashboard--card--why:hover .dashboard--card--why .header .dashboard--card--why--title {
+    padding: 0;
+}
+
+.dashboard--card--why .dashboard--card--why--content {
+    color: #212121;
+    text-align: center;
+}
+
+/*  */
+
+/* ============= styling button booking ============= */
+
+.btn--shop {
+    padding: .6em 1.2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 0 2px #000;
+}
+
+.btn--shop:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+}
+
+.btn--shop:hover {
+    background-color: #2F82FF;
+    color: #fff;
+    box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+.btn--shop:hover::before {
+    transform: skewX(30deg) translate(200%, -50%);
+    transition-delay: 0.1s;
+}
+
+.btn--shop:active {
+    transform: scale(0.9);
+}
+
+/* ============= styling chair ============= */
+
+.seat--list--book {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5em;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.seat--list {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5em;
+    border: 1px dashed #2F82FF;
+    border-radius: 8px;
+    transition: all .3s ease-in;
+}
+
+.seat--list:hover {
+    background: #dadada !important;
+}
+
+/* ============= styling ResultFilter ============= */
+
+.card--result {
+    border: 1px solid transparent;
+    transition: all .5s ease-in-out;
+}
+
+.card--result:hover {
+    border: 1px solid #2F82FF;
+    box-shadow: 1px 5px 20px -5px #2F82FF;
+}
+
+.text--side--price {
+    width: 120px;
+    height: 56px;
+    box-sizing: content-box;
+    padding: 15px 0;
+    border-radius: 5px 5px 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    float: right;
+    background: red;
+    color: white;
+    text-align: center;
+}
+
+.text--side--price::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid white;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+}
+
+.btn--cta {
+    width: 140px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #2F82FF;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.btn--cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #2F82FF;
+    z-index: -1;
+    transition: all 0.5s;
+    border-radius: 0 10px 10px 0;
+}
+
+.btn--cta:hover::before {
+    width: 100%;
+}
+
+.btn--cta:hover {
+    color: white;
+}
+
+.btn--cta:active:before {
+    background: #b9b9b9;
+}
+
+/* ============= styling footer user ============= */
+
+.footer--user {
+    background: #575A63;
+    margin-top: 4em;
+    padding: 4em 0;
+    color: white;
+}
+
+.footer--user div p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2em;
+}
+
+.footer--user .footer--nav {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 1em;
+    position: relative;
+    transition: all .5s ease-in;
+}
+
+.footer--user .footer--nav::before {
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    position: absolute;
+    background: white;
+    transition: all .5s ease-in;
+}
+
+.footer--user .footer--nav:hover::before {
+    width: 10%;
+}
+
+.footer--user .footer--social {
+    color: white;
+    margin-right: 1em;
+}
+
+/* ============= styling profile page ============= */
+
+.nav--profile {
+    position: relative;
+    background: #dadada;
+    padding: 1em 1.5em;
+    border-radius: 0 0 5px 5px;
+}
+
+.nav--profile a {
+    text-decoration: none;
+    color: black;
+    padding: 1em 1.5em;
+}
+
+.nav--profile a.active {
+    border-bottom: 2px solid #2F82FF;
+}
+
+.nav--profile a:not(.active):hover {
+    border-bottom: 2px solid #FF4E4E;
+}
+
+/* ============= styling profile wishlist ============= */
+
+.user--wish--item {
+    padding: 1em;
+    border: 1px solid transparent;
+    transition: all .3s ease-out;
+}
+
+.user--wish--item:hover {
+    background: #F3F7FD;
+    border: 1px solid #2F82FF;
+    border-radius: 7px;
+    box-shadow: 1px 3px 12px -3px #2F82FF;
+}

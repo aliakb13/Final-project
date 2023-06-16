@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background: #F3F7FD;
+    overflow-x: hidden;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+/* ==================== STYLING SIDEBAR ==================== */
+
+.content {
+    width: calc(100% - 70px);
+    margin-left: auto;
+    height: 100%;
+    word-break: break-word;
+    transition: width 0.3s ease;
+}
+
+.content-open {
+    width: calc(100% - 230px);
+    margin-left: auto;
+    height: 100%;
+    word-break: break-word;
+    transition: width 0.3s ease;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s ease;
+    padding-top: 15px;
+}
+
+.sidebar .sidebar-position {
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.sidebar .sidebar-position:hover:not(.icon) {
+    background-color: #F3F7FD;
+    border-right: 5px #FF4E4E solid;
+}
+
+.sidebar a {
+    width: 0;
+    height: 0;
+    padding: 0 15px;
+    transition: width 0.3s ease;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+.sidebar--open {
+    width: 230px;
+    transition: width 0.3s ease;
+}
+
+.sidebar--open .sidebar-position a {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ==================== STYLING NAVUSER ==================== */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .brand-icon {
+    color: black;
+    font-size: 30px;
+    transform: rotate(50deg);
+    transition: 0.2s ease-out;
+}
+
+.navbar-brand:hover .brand-icon {
+    transform: rotate(90deg);
+}
+
+.navbar-brand p {
+    margin: 5px auto;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navbar-link {
+    font-size: 17px;
+    background: transparent;
+    text-decoration: none;
+    border: none;
+    padding: .5em 1em;
+    color: black;
+    position: relative;
+    transition: .5s ease;
+}
+
+.navbar-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #2F82FF;
+    transition: .5s ease;
+}
+
+.navbar-link:hover {
+    color: white;
+    transition-delay: .5s;
+    z-index: 5;
+}
+
+.navbar-link:hover::before {
+    width: 100%;
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    background-color: #2F82FF;
+    transition: .4s ease;
+    z-index: -1;
+}
+
+.navbar-link:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.user--notif--dropdown {
+    width: 50vh;
+    height: 75vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 0;
+    border: 0;
+    box-shadow: 1px 5px 20px -5px #2F82FF;
+}
+
+.user--notif--item {
+    display: flex;
+    padding: 1em;
+}
+
+.user--notif--item:hover {
+    background: #F3F7FD;
+}
+
+.user--notif--desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn--notification {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    color: black;
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 100%;
+}
